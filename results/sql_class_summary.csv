@@ -1,0 +1,4 @@
+demand_class,parts,units_last_12m,share_of_units
+intermittent,2146,9920.0,0.7900605288308379
+lumpy,337,2601.0,0.20715195922268237
+too few demands,26,35.0,0.0027875119464797708

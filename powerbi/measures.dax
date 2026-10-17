@@ -1,0 +1,19 @@
+// Tables: fact_demand (part, month, qty), dim_part (part, demand_class, abc, adi, cv2...),
+// fact_recommendation (one row per part), stock_policy_backtest.
+// Relationships: fact_demand[part] -> dim_part[part]; fact_recommendation[part] -> dim_part[part].
+
+Units = SUM ( fact_demand[qty] )
+
+Parts With Demand = CALCULATE ( DISTINCTCOUNT ( fact_demand[part] ), fact_demand[qty] > 0 )
+
+Share Of Zero Months =
+DIVIDE ( CALCULATE ( COUNTROWS ( fact_demand ), fact_demand[qty] = 0 ), COUNTROWS ( fact_demand ) )
+
+Parts To Order = CALCULATE ( COUNTROWS ( fact_recommendation ), fact_recommendation[proposed_order] > 0 )
+
+Units To Order = SUM ( fact_recommendation[proposed_order] )
+
+Dormant Parts = CALCULATE ( COUNTROWS ( fact_recommendation ), fact_recommendation[demand_last_12m] = 0 )
+
+Stock In Months Of Demand =
+DIVIDE ( SUM ( fact_recommendation[on_hand] ), SUM ( fact_recommendation[forecast_per_month] ) )

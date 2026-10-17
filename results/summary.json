@@ -1,0 +1,363 @@
+{
+  "data": {
+    "parts": 2674,
+    "months": 51,
+    "first_month": "1998-01",
+    "last_month": "2002-03",
+    "history_stops_early": 165,
+    "units": 66194.0,
+    "max_monthly_qty": 52.0,
+    "share_of_zero_months": 0.7477658692380923,
+    "sha256": "81f1d1f1785278e376651ff447b6b0e0a2cf763373f01d61fe04fad0b7f20b0c",
+    "complete_parts": 2509
+  },
+  "classes_full_history": {
+    "intermittent": 2294,
+    "lumpy": 347,
+    "too few demands": 30,
+    "smooth": 3
+  },
+  "classes_first_24_months": {
+    "intermittent": 1579,
+    "too few demands": 660,
+    "lumpy": 180,
+    "smooth": 74,
+    "erratic": 16
+  },
+  "no_demand_last_12_months": 698,
+  "demand_by_year": [
+    {
+      "year": 1998,
+      "units": 18639.0,
+      "months": 12,
+      "units_per_month": 1553.2
+    },
+    {
+      "year": 1999,
+      "units": 15765.0,
+      "months": 12,
+      "units_per_month": 1313.8
+    },
+    {
+      "year": 2000,
+      "units": 14451.0,
+      "months": 12,
+      "units_per_month": 1204.2
+    },
+    {
+      "year": 2001,
+      "units": 13188.0,
+      "months": 12,
+      "units_per_month": 1099.0
+    },
+    {
+      "year": 2002,
+      "units": 2873.0,
+      "months": 3,
+      "units_per_month": 957.7
+    }
+  ],
+  "accuracy_all": {
+    "zero": {
+      "scaled_mae": 1.701,
+      "relative_mse": 1.099,
+      "bias": -1.0
+    },
+    "naive": {
+      "scaled_mae": 2.49,
+      "relative_mse": 1.703,
+      "bias": 0.008
+    },
+    "moving_average": {
+      "scaled_mae": 2.277,
+      "relative_mse": 1.0,
+      "bias": 0.062
+    },
+    "ses": {
+      "scaled_mae": 2.247,
+      "relative_mse": 1.008,
+      "bias": 0.098
+    },
+    "croston": {
+      "scaled_mae": 2.468,
+      "relative_mse": 1.374,
+      "bias": 0.23
+    },
+    "sba": {
+      "scaled_mae": 2.427,
+      "relative_mse": 1.334,
+      "bias": 0.168
+    },
+    "tsb": {
+      "scaled_mae": 2.24,
+      "relative_mse": 1.055,
+      "bias": 0.162
+    }
+  },
+  "accuracy_intermittent": {
+    "zero": {
+      "scaled_mae": 1.042,
+      "relative_mse": 1.09,
+      "bias": -1.0
+    },
+    "naive": {
+      "scaled_mae": 1.519,
+      "relative_mse": 1.722,
+      "bias": 0.02
+    },
+    "moving_average": {
+      "scaled_mae": 1.431,
+      "relative_mse": 1.0,
+      "bias": 0.139
+    },
+    "ses": {
+      "scaled_mae": 1.442,
+      "relative_mse": 1.012,
+      "bias": 0.203
+    },
+    "croston": {
+      "scaled_mae": 1.753,
+      "relative_mse": 1.506,
+      "bias": 0.528
+    },
+    "sba": {
+      "scaled_mae": 1.715,
+      "relative_mse": 1.451,
+      "bias": 0.452
+    },
+    "tsb": {
+      "scaled_mae": 1.454,
+      "relative_mse": 1.06,
+      "bias": 0.256
+    }
+  },
+  "stock_95_lead3": [
+    {
+      "lead_time_months": 3,
+      "method": "sba_normal",
+      "target": 0.95,
+      "demand_class": "erratic",
+      "parts": 16,
+      "fill_rate": 0.961,
+      "demand_months_served_in_full": 0.972,
+      "avg_units_on_hand_per_part": 10.829,
+      "stock_in_months_of_demand": 20.164
+    },
+    {
+      "lead_time_months": 3,
+      "method": "sba_normal",
+      "target": 0.95,
+      "demand_class": "intermittent",
+      "parts": 1579,
+      "fill_rate": 0.887,
+      "demand_months_served_in_full": 0.908,
+      "avg_units_on_hand_per_part": 5.051,
+      "stock_in_months_of_demand": 12.376
+    },
+    {
+      "lead_time_months": 3,
+      "method": "sba_normal",
+      "target": 0.95,
+      "demand_class": "lumpy",
+      "parts": 180,
+      "fill_rate": 0.95,
+      "demand_months_served_in_full": 0.965,
+      "avg_units_on_hand_per_part": 8.872,
+      "stock_in_months_of_demand": 16.209
+    },
+    {
+      "lead_time_months": 3,
+      "method": "sba_normal",
+      "target": 0.95,
+      "demand_class": "smooth",
+      "parts": 74,
+      "fill_rate": 0.99,
+      "demand_months_served_in_full": 0.988,
+      "avg_units_on_hand_per_part": 8.298,
+      "stock_in_months_of_demand": 10.937
+    },
+    {
+      "lead_time_months": 3,
+      "method": "sba_normal",
+      "target": 0.95,
+      "demand_class": "too few demands",
+      "parts": 660,
+      "fill_rate": 0.558,
+      "demand_months_served_in_full": 0.58,
+      "avg_units_on_hand_per_part": 2.609,
+      "stock_in_months_of_demand": 5.342
+    },
+    {
+      "lead_time_months": 3,
+      "method": "sba_normal",
+      "target": 0.95,
+      "demand_class": "all",
+      "parts": 2509,
+      "fill_rate": 0.805,
+      "demand_months_served_in_full": 0.836,
+      "avg_units_on_hand_per_part": 4.816,
+      "stock_in_months_of_demand": 10.692
+    },
+    {
+      "lead_time_months": 3,
+      "method": "ses_normal",
+      "target": 0.95,
+      "demand_class": "erratic",
+      "parts": 16,
+      "fill_rate": 0.961,
+      "demand_months_served_in_full": 0.972,
+      "avg_units_on_hand_per_part": 9.639,
+      "stock_in_months_of_demand": 17.948
+    },
+    {
+      "lead_time_months": 3,
+      "method": "ses_normal",
+      "target": 0.95,
+      "demand_class": "intermittent",
+      "parts": 1579,
+      "fill_rate": 0.91,
+      "demand_months_served_in_full": 0.928,
+      "avg_units_on_hand_per_part": 4.836,
+      "stock_in_months_of_demand": 11.849
+    },
+    {
+      "lead_time_months": 3,
+      "method": "ses_normal",
+      "target": 0.95,
+      "demand_class": "lumpy",
+      "parts": 180,
+      "fill_rate": 0.955,
+      "demand_months_served_in_full": 0.966,
+      "avg_units_on_hand_per_part": 8.633,
+      "stock_in_months_of_demand": 15.773
+    },
+    {
+      "lead_time_months": 3,
+      "method": "ses_normal",
+      "target": 0.95,
+      "demand_class": "smooth",
+      "parts": 74,
+      "fill_rate": 0.988,
+      "demand_months_served_in_full": 0.986,
+      "avg_units_on_hand_per_part": 7.994,
+      "stock_in_months_of_demand": 10.536
+    },
+    {
+      "lead_time_months": 3,
+      "method": "ses_normal",
+      "target": 0.95,
+      "demand_class": "too few demands",
+      "parts": 660,
+      "fill_rate": 0.636,
+      "demand_months_served_in_full": 0.651,
+      "avg_units_on_hand_per_part": 3.22,
+      "stock_in_months_of_demand": 6.593
+    },
+    {
+      "lead_time_months": 3,
+      "method": "ses_normal",
+      "target": 0.95,
+      "demand_class": "all",
+      "parts": 2509,
+      "fill_rate": 0.84,
+      "demand_months_served_in_full": 0.865,
+      "avg_units_on_hand_per_part": 4.807,
+      "stock_in_months_of_demand": 10.673
+    },
+    {
+      "lead_time_months": 3,
+      "method": "empirical",
+      "target": 0.95,
+      "demand_class": "erratic",
+      "parts": 16,
+      "fill_rate": 1.0,
+      "demand_months_served_in_full": 1.0,
+      "avg_units_on_hand_per_part": 16.824,
+      "stock_in_months_of_demand": 31.328
+    },
+    {
+      "lead_time_months": 3,
+      "method": "empirical",
+      "target": 0.95,
+      "demand_class": "intermittent",
+      "parts": 1579,
+      "fill_rate": 0.877,
+      "demand_months_served_in_full": 0.898,
+      "avg_units_on_hand_per_part": 4.872,
+      "stock_in_months_of_demand": 11.937
+    },
+    {
+      "lead_time_months": 3,
+      "method": "empirical",
+      "target": 0.95,
+      "demand_class": "lumpy",
+      "parts": 180,
+      "fill_rate": 0.976,
+      "demand_months_served_in_full": 0.984,
+      "avg_units_on_hand_per_part": 11.669,
+      "stock_in_months_of_demand": 21.32
+    },
+    {
+      "lead_time_months": 3,
+      "method": "empirical",
+      "target": 0.95,
+      "demand_class": "smooth",
+      "parts": 74,
+      "fill_rate": 0.994,
+      "demand_months_served_in_full": 0.992,
+      "avg_units_on_hand_per_part": 10.894,
+      "stock_in_months_of_demand": 14.358
+    },
+    {
+      "lead_time_months": 3,
+      "method": "empirical",
+      "target": 0.95,
+      "demand_class": "too few demands",
+      "parts": 660,
+      "fill_rate": 0.498,
+      "demand_months_served_in_full": 0.507,
+      "avg_units_on_hand_per_part": 2.092,
+      "stock_in_months_of_demand": 4.284
+    },
+    {
+      "lead_time_months": 3,
+      "method": "empirical",
+      "target": 0.95,
+      "demand_class": "all",
+      "parts": 2509,
+      "fill_rate": 0.784,
+      "demand_months_served_in_full": 0.814,
+      "avg_units_on_hand_per_part": 4.882,
+      "stock_in_months_of_demand": 10.84
+    }
+  ],
+  "dormant_rule": [
+    {
+      "at_month": "2000-01",
+      "gap_months": 6,
+      "parts_flagged": 785,
+      "sold_again": 717,
+      "share_sold_again": 0.913375796178344,
+      "units_sold_later_by_flagged": 7122.0,
+      "units_sold_later_total": 30512.0
+    },
+    {
+      "at_month": "2000-01",
+      "gap_months": 12,
+      "parts_flagged": 503,
+      "sold_again": 485,
+      "share_sold_again": 0.9642147117296223,
+      "units_sold_later_by_flagged": 5646.0,
+      "units_sold_later_total": 30512.0
+    }
+  ],
+  "demo_orders": {
+    "parts_to_order": 159,
+    "units": 256.0,
+    "flagged": {
+      "excess": 537,
+      "no_demand_12m": 533,
+      "too_few_demands": 26
+    }
+  }
+}
